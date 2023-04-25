@@ -1,25 +1,26 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Documentation Starter Kit",
+  "name": "Revocalize AI API Documentation",
   "logo": {
     "dark": "/logo/dark.png",
     "light": "/logo/light.png"
   },
   "favicon": "/favicon.png",
   "colors": {
-    "primary": "#0069ED",
-    "light": "#4D9CFF",
-    "dark": "#0050B4"
+    "primary": "#da45f0",
+    "light": "#da45f0",
+    "dark": "#da45f0"
   },
+  "backgroundImage": "/images/lightbackground.png",
   "topbarLinks": [
     {
-      "name": "Documentation",
-      "url": "https://mintlify.com/docs"
+      "name": "Login",
+      "url": "https://www.revocalize.ai/sign-in"
     }
   ],
   "topbarCtaButton": {
-    "name": "Get Started",
-    "url": "https://github.com/mintlify/starter"
+    "name": "Get API Key",
+    "url": "https://www.revocalize.ai/sign-up"
   },
   "anchors": [
     {
@@ -40,8 +41,12 @@
   ],
   "navigation": [
     {
-      "group": "Home",
-      "pages": ["introduction", "features"]
+      "group": "Welcome",
+      "pages": ["introduction", "faq", "features"]
+    },
+    {
+      "group": "Authentication",
+      "pages": ["Getting started"]
     },
     {
       "group": "API Documentation",
@@ -58,8 +63,9 @@
     }
   ],
   "footerSocials": {
-    "twitter": "https://twitter.com/mintlify",
+    "twitter": "https://twitter.com/Revocalize",
     "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "linkedin": "https://www.linkedin.com/company/revocalize",
+    "instagram": "https://instagram.com/revocalize.ai"
   }
 }
