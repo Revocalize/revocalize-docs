@@ -3,7 +3,8 @@
   "name": "Revocalize AI API Documentation",
   "logo": {
     "dark": "/logo/dark.png",
-    "light": "/logo/light.png"
+    "light": "/logo/light.png",
+    "href": "https://www.revocalize.ai"
   },
   "favicon": "/favicon.png",
   "colors": {
@@ -57,6 +58,7 @@
     }
   ],
   "footerSocials": {
+    "website": "https://www.revocalize.ai",
     "twitter": "https://twitter.com/Revocalize",
     "linkedin": "https://www.linkedin.com/company/revocalize",
     "instagram": "https://instagram.com/revocalize.ai"
