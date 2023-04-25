@@ -1,0 +1,17 @@
+---
+title: "Setup Authentication"
+description: "To get started using the Revocalize API, you'll need to generate an API Key through your Revocalize dashboard: [www.revocalize.ai/api-keys](https://www.revocalize.ai/api-keys)."
+---
+
+Tokens must be included in the ```Authentication``` HTTP header in all requests as a type ```Bearer```.
+
+```bash
+'Authorization': 'Bearer <revocalize_api_key>'
+```
+
+Test everything is working correctly using the ping endpoint and curl:
+
+```bash Ping Test
+curl -H "Authentication: Bearer " https://api.revocalize.ai/ping
+{"ping":"pong"}
+```

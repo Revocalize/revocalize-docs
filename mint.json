@@ -24,48 +24,46 @@
   },
   "anchors": [
     {
-      "name": "API Reference",
-      "icon": "rectangle-terminal",
-      "url": "api-reference"
+      "name": "Partners Program",
+      "icon": "handshake",
+      "url": "mailto:partners@revocalize.ai"
     },
     {
-      "name": "Changelog",
-      "icon": "list",
-      "url": "https://mintlify.com"
+      "name": "Play with live demo",
+      "icon": "bullseye-pointer",
+      "url": "https://www.revocalize.ai"
     },
     {
-      "name": "Community",
-      "icon": "discord",
-      "url": "https://mintlify.com/community"
+      "name": "Contact Us",
+      "icon": "envelope",
+      "url": "mailto:contact@revocalize.ai"
     }
   ],
   "navigation": [
     {
       "group": "Welcome",
-      "pages": ["introduction", "faq", "features"]
+      "pages": ["introduction"]
     },
     {
       "group": "Authentication",
-      "pages": ["Getting started"]
+      "pages": ["authentication"]
     },
     {
-      "group": "API Documentation",
-      "pages": ["api-reference/authentication"]
-    },
-    {
-      "group": "Endpoint Examples",
+      "group": "API Endpoints",
       "pages": [
-        "api-reference/endpoint/get",
         "api-reference/endpoint/create",
-        "api-reference/endpoint/update",
-        "api-reference/endpoint/delete"
+        "api-reference/endpoint/get"
       ]
     }
   ],
   "footerSocials": {
     "twitter": "https://twitter.com/Revocalize",
-    "github": "https://github.com/mintlify",
     "linkedin": "https://www.linkedin.com/company/revocalize",
     "instagram": "https://instagram.com/revocalize.ai"
+  },
+  "api": {
+    "auth": {
+        "method": "bearer"
+    }
   }
 }

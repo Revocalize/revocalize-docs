@@ -1,84 +1,52 @@
 ---
-title: "Create User"
-api: "POST https://api.mintlify.com/api/user"
-description: "This endpoint creates a new user"
+title: "Convert Audio File"
+api: "POST https://api.revocalize.ai/convert"
+description: "This endpoint takes a WAV vocal audio file and returns a URL string with the converted vocals audio file."
+authMethod: "bearer"
 ---
 
-### Body
+### Request
 
-<ParamField body="current_token" type="string">
-  This is the current user group token you have for the user group that you want
-  to rotate.
+<ParamField body="audio_file" type="file" required>
+  The input vocal audio file. The maximum allowed file size is 100MB. The recommended audio format is WAV. Other audio formats may be supported, but the results may be less accurate.
+</ParamField>
+
+<ParamField body="model" type="string" required>
+  The model to use for the conversion. The currently available models are: <br/>
+  <ol>
+    <li>```andra```</li>
+    <li>```nicole_cherry```</li>
+    <li>```marius_moga```</li>
+    <li>```sebastian_dobrincu```</li>
+  </ol>
+</ParamField>
+
+<ParamField body="transpose" type="integer" optional default="0">
+  The number of semitones to transpose the vocals. The default value is 0. The allowed range is -12 to 12.
 </ParamField>
 
 ### Response
 
-<ResponseField name="success" type="number">
-  Indicates whether the call was successful. 1 if successful, 0 if not.
-</ResponseField>
-
-<ResponseField name="user_group" type="object">
-
-The contents of the user group
-
-<Expandable title="Toggle object">
-
-<ResponseField name="team_id" type="number">
-  This is the internal ID for this user group. You don't need to record this
-  information, since you will not need to use it.
-</ResponseField>
-
-<ResponseField name="token" type="string">
-  This is the user group token (userGroupToken or USER_GROUP_TOKEN) that will be
-  used to identify which user group is viewing the dashboard. You should save
-  this on your end to use when rendering an embedded dashboard.
-</ResponseField>
-
-<ResponseField name="name" type="string">
-  This is the name of the user group provided in the request body.
-</ResponseField>
-
-<ResponseField name="provided_id" type="string">
-  This is the user_group_id provided in the request body.
-</ResponseField>
-
-<ResponseField name="api_environment_tag" type="JSON or null">
-  This is the environment tag of the user group. Possible values are 'Customer'
-  and 'Testing'. User group id's must be unique to each environment, so you can
-  not create multiple user groups with with same id. If you have a production
-  customer and a test user group with the same id, you will be required to label
-  one as 'Customer' and another as 'Testing'
-</ResponseField>
-
-</Expandable>
-
-</ResponseField>
+<ResponseField name="task_id" type="string">
+  ID of the conversion task. Use it to check the status of the conversion task.
+</ResponseField> 
 
 <RequestExample>
 
 ```bash Example Request
-curl --location --request POST 'https://api.mintlify.com/api/user' \
---header 'Content-Type: application/json' \
---header 'Authorization: Token <token>' \
---data-raw '{
-    "current_token": ""
-}'
+curl --location --request POST 'https://api.revocalize.ai/convert' \
+--header 'Content-Type: multipart/form-data' \
+--header 'Authorization: Bearer <token>' \
+--form 'audio=@/path_to_audio_file.wav'
+--form 'model=andra'
+--form 'transpose=0'
 ```
-
-</RequestExample>
+</RequestExample> 
 
 <ResponseExample>
-
 ```json Response
 {
-  "success": 1,
-  "user_group": {
-    "team_id": 3,
-    "token": "<user_group_token_to_auth_dashboard>",
-    "name": "Example 1",
-    "provided_id": "example_1"
-  }
+  "task_id": "123456"
 }
 ```
-
-</ResponseExample>
+</ResponseExample> 
