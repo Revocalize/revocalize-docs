@@ -59,7 +59,15 @@
     {
       "group": "Voice Models API",
       "pages": [
-        "api-reference/models/get"
+        "api-reference/models/get",
+        "api-reference/models/create"
+      ]
+    },
+    {
+      "group": "Training AI Voice Models",
+      "pages": [
+        "api-reference/training/get",
+        "api-reference/training/train"
       ]
     }
   ],

@@ -1,0 +1,51 @@
+---
+title: "Train Model"
+api: "POST https://api.revocalize.ai/models/{model_id}/train"
+description: "Train a custom AI voice model after [creating it](/api-reference/models/create) in a pending state."
+authMethod: "bearer"
+---
+
+### Request
+
+<ParamField path="model_id" type="string" required>
+  The model ID to train. This is the ID of the model you created in a pending state.
+</ParamField>
+
+<ParamField body="epochs" type="integer" required>
+  The number of epochs to train the model. The minimum value is 100. The allowed range is 1 to 100,000. More epochs will result in a better model, but will take longer to train.
+</ParamField>
+
+### Response
+
+<ResponseField name="status" type="string">
+  The status of the training task. Possible values are: <code>training</code>, <code>completed</code>, <code>failed</code>.
+</ResponseField> 
+
+<ResponseField name="model_id" type="string">
+  The ID of the model being trained. This is the same as the ```model_id``` in the request URL.
+</ResponseField> 
+
+<ResponseField name="current_epoch" type="integer">
+  The current epoch of the training task. This value will be 0 if the training task has not started yet.
+</ResponseField> 
+
+
+<RequestExample>
+
+```bash Example Request
+curl --location --request POST 'https://api.revocalize.ai/models/123456/train' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <token>' \
+--form 'epochs=100'
+```
+</RequestExample> 
+
+<ResponseExample>
+```json Response
+{
+  "status": "training",
+  "model_id": "123456",
+  "current_epoch": 50001,
+}
+```
+</ResponseExample> 

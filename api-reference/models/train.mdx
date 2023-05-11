@@ -1,0 +1,56 @@
+---
+title: "Train Model"
+api: "POST https://api.revocalize.ai/models/{model_id}/train"
+description: "Train a custom AI voice model after [creating it](/api-reference/models/create) in a pending state."
+authMethod: "bearer"
+---
+
+### Request
+
+<ParamField body="audio_file" type="file" required>
+  The input vocal audio file. The maximum allowed file size is 100MB. The recommended audio format is WAV. Other audio formats may be supported, but the results may be less accurate.
+</ParamField>
+
+<ParamField body="model" type="string" required>
+  The AI voice model to use for the conversion. Fetch the available models for your organization from the [models API endpoint](/api/models). The available preset models are:
+  <ol>
+    <li>```andra```</li>
+    <li>```nicole_cherry```</li>
+    <li>```marius_moga```</li>
+    <li>```sebastian_dobrincu```</li>
+  </ol>
+</ParamField>
+
+<ParamField body="transpose" type="integer" optional default="0">
+  The number of semitones to transpose the vocals. The default value is 0. The allowed range is -12 to 12.
+</ParamField>
+
+<ParamField body="generations_count" type="integer" optional default="1">
+  The number of generations to create. The default value is 1. The allowed range is 1 to 10.
+</ParamField>
+
+### Response
+
+<ResponseField name="task_id" type="string">
+  ID of the conversion task. Use it to check the status of the conversion task.
+</ResponseField> 
+
+<RequestExample>
+
+```bash Example Request
+curl --location --request POST 'https://api.revocalize.ai/convert' \
+--header 'Content-Type: multipart/form-data' \
+--header 'Authorization: Bearer <token>' \
+--form 'audio=@/path_to_audio_file.wav'
+--form 'model=andra'
+--form 'transpose=0'
+```
+</RequestExample> 
+
+<ResponseExample>
+```json Response
+{
+  "task_id": "123456"
+}
+```
+</ResponseExample> 

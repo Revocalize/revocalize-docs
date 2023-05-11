@@ -1,0 +1,70 @@
+---
+title: Getting Started
+description: Start training custom AI voice models with Revocalize.
+---
+
+![Hero Image](/images/revocalize-ai-voice-models.png)
+
+<Info>
+  **Prerequisite** You should have your Revocalize account set up after going through
+  [onboarding](https://www.revocalize.ai).
+</Info>
+
+## Setup your training data
+
+Learn how to structure your training data to get the best results.
+
+<AccordionGroup>
+
+<Accordion icon="upload" title="Upload your audio training files">
+1. Create a folder in your repo called `audio`.
+2. Add dry acapella voice files to the `audio` folder.
+3. Create the ```model.json``` file in the root of your repo. This file will contain the configuration for your model. The following is an example of a ```model.json``` file:
+  ```json
+  {
+    "name": "Sample Model",
+    "description": "A custom voice model ready for training",
+    "audio_directory": "audio"
+  } 
+  ```
+4. Zip the `audio` folder and `model.json` file together.
+5. Upload the zip file through the [Revocalize dashboard](https://www.revocalize.ai).
+</Accordion>
+
+<Accordion icon="rocket" title="Record your training audio through Revocalize">
+Revocalize allows you to record your training audio directly through the dashboard. This is a great option if you don't have any audio files to train with.
+
+Simply head to the [Revocalize dashboard](https://www.revocalize.ai) and click the "Record Audio" button. You will be prompted to record your audio. 
+Once you are done, you can download the audio files and the `model.json` file will be automatically generated for you.
+
+</Accordion>
+
+</AccordionGroup>
+
+## Optimize your training data
+
+Optimizing your training data will help you get the best results from your custom voice model. 
+We recommend the following guidelines when preparing your training data files:
+
+- **Use dry acapella voice files** - This means that the audio files should not contain any background music or sound effects (e.g. reverb, delay, etc.).
+- **Use high quality audio files** - The audio files should be recorded in a quiet environment with minimal background noise (e.g. no traffic, no wind, etc.). Ideally the audio files should be recorded in a professional studio.
+- **Use a consistent volume level** - The volume level of the audio files should be consistent across all files (e.g. no clipping, no distortion, etc.).
+- **Use a consistent sample rate** - The sample rate of the audio files should be consistent across all files (e.g. 44.1kHz, 48kHz, etc.).
+- **Use a consistent bit depth** - The bit depth of the audio files should be consistent across all files (e.g. 16-bit, 24-bit, etc.).
+- **Use a consistent file format** - The file format of the audio files should be consistent across all files (e.g. WAV, AIFF, etc.).
+
+<CardGroup>
+
+<Card title="Create your AI Voice Model" icon="fingerprint" href="/api-reference/models/create">
+  Quick-quide to creating your first AI voice model with Revocalize.
+</Card>
+
+<Card
+  title="Train API Endpoints"
+  icon="square-code"
+  href="/api-reference/training/train"
+>
+  Learn how to train your AI voice model with Revocalize.
+</Card>
+
+</CardGroup>
