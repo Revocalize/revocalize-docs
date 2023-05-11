@@ -1,0 +1,115 @@
+---
+title: "Get Available Models"
+api: "GET https://api.revocalize.ai/models"
+description: "The ```/models``` endpoint returns the available AI Voice Models for your Revocalize account. Any of the available models can be used in the [Voice Synthesis API](/api-reference/synthesis/create) to create audio generations."
+authMethod: "bearer"
+---
+
+
+### Response
+
+<ResponseField name="models" type="array">
+  The array of available AI voice models for your Revocalize account.
+    
+    <Expandable title="voice model object" defaultOpen="true">
+      <ResponseField name="id" type="strng">
+        A unique identifier for each AI voice model. This is the value that should be used in the ```voice_model``` parameter of the [Voice Synthesis API](/api-reference/synthesis/create).
+      </ResponseField>
+      <ResponseField name="name" type="string">
+        The name of the artist or musician that the AI voice model is based on.
+      </ResponseField>
+      <ResponseField name="gender" type="string" type='"male" | "female"'>
+        The gender of the AI voice model. 
+      </ResponseField>
+      <ResponseField name="age" type="string" type='"child" | "young adult" | "adult"'>
+        The age category of the AI voice model.
+      </ResponseField>
+      <ResponseField name="description" type="string">
+        A brief description of the AI voice model's characteristics.
+      </ResponseField>
+      <ResponseField name="base_language" type="string">
+        The base language of the AI voice model, in [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) format.
+      </ResponseField>
+      <ResponseField name="traits" type="array">
+        An array of traits that describe the AI voice model's vocal qualities.
+      </ResponseField>
+      <ResponseField name="genre" type="string">
+        The genre that the AI voice model is best suited for. Possible values are: 
+        <ol>
+          <li>```pop```</li>
+          <li>```rock```</li>
+          <li>```hip-hop```</li>
+          <li>```r&b```</li>
+          <li>```country```</li>
+          <li>```jazz```</li>
+          <li>```classical```</li>
+          <li>```electronic```</li>
+          <li>```world```</li>
+          <li>```other```</li>
+        </ol>
+      </ResponseField>
+      <ResponseField name="voice_type" type="string">
+        The voice type of the AI voice model. Possible values are: ```soprano```, ```mezzo-soprano```, ```alto```, ```tenor```, ```baritone```, ```bass```.
+      </ResponseField>
+      <ResponseField name="vocal_range" type="object">
+        An object containing the minimum and maximum vocal range of the AI voice model.
+        <Expandable title="vocal range object">
+          <ResponseField name="min" type="string">
+            The minimum vocal range of the AI voice model.
+          </ResponseField>
+          <ResponseField name="max" type="string">
+            The maximum vocal range of the AI voice model.
+          </ResponseField>
+        </Expandable>
+      </ResponseField>
+    </Expandable>
+
+
+</ResponseField>
+
+<RequestExample>
+```bash Example Request
+curl --location --request GET 'https://api.revocalize.ai/models'
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <token>'
+```
+</RequestExample> 
+
+<ResponseExample>
+```json
+{
+  "models": [
+    {
+      id: "andra",
+      name: "Andra",
+      gender: "female",
+      age: "adult",
+      description: "Popular pop singer with a powerful and dynamic vocal range. Her voice is characterized by its soulful quality, agility, and emotive expressiveness.",
+      base_language: "en",
+      traits: ["nasal", "powerful", "emotive", "dynamic", "soulful"],
+      genre: "pop"
+      voice_type: "tenor",
+      vocal_range: {
+        min: "C3",
+        max: "C7",
+      }
+    },
+    {
+      id: "smiley",
+      name: "Smiley",
+      gender: "male",
+      age: "young adult",
+      description: "Romanian musician and producer known for his smooth and versatile vocal style, which ranges from tender and emotive to powerful and dynamic.",
+      base_language: "ro",
+      traits: ["smooth", "versatile", "emotive", "dynamic", "expressive"],
+      genre: "r&b",
+      voice_type: "bass",
+      vocal_range: {
+        min: "E2",
+        max: "E4",
+      }
+    }
+  ]
+}
+```
+</ResponseExample> 

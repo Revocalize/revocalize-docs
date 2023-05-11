@@ -30,7 +30,7 @@
       "url": "mailto:partners@revocalize.ai"
     },
     {
-      "name": "Play with live demo",
+      "name": "Try Live Demo",
       "icon": "bullseye-pointer",
       "url": "https://www.revocalize.ai"
     },
@@ -50,10 +50,16 @@
       "pages": ["authentication"]
     },
     {
-      "group": "API Endpoints",
+      "group": "Voice Synthesis API",
       "pages": [
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/get"
+        "api-reference/synthesis/create",
+        "api-reference/synthesis/get"
+      ]
+    },
+    {
+      "group": "Voice Models API",
+      "pages": [
+        "api-reference/models/get"
       ]
     }
   ],

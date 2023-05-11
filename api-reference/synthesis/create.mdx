@@ -12,7 +12,7 @@ authMethod: "bearer"
 </ParamField>
 
 <ParamField body="model" type="string" required>
-  The model to use for the conversion. The currently available models are: <br/>
+  The ID of the AI voice model used for conversion. Fetch the available models for your organization from the [/models](/api-reference/models/get) API endpoint. The available demo models are:
   <ol>
     <li>```andra```</li>
     <li>```nicole_cherry```</li>
@@ -23,6 +23,10 @@ authMethod: "bearer"
 
 <ParamField body="transpose" type="integer" optional default="0">
   The number of semitones to transpose the vocals. The default value is 0. The allowed range is -12 to 12.
+</ParamField>
+
+<ParamField body="generations_count" type="integer" optional default="1">
+  The number of generations to create. The default value is 1. The allowed range is 1 to 10.
 </ParamField>
 
 ### Response
@@ -40,6 +44,7 @@ curl --location --request POST 'https://api.revocalize.ai/convert' \
 --form 'audio=@/path_to_audio_file.wav'
 --form 'model=andra'
 --form 'transpose=0'
+--form 'generations_count=4'
 ```
 </RequestExample> 
 
