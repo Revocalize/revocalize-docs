@@ -124,7 +124,7 @@ Response:
 If you have any questions, suggestions, or need assistance, feel free to reach out to us:
 
 - Email: [contact@revocalize.ai](mailto:contact@revocalize.ai)
-- Twitter: [@RevocalizeAI](https://twitter.com/Revocalize)
+- Twitter: [@Revocalize](https://twitter.com/Revocalize)
 - GitHub: [Revocalize AI](https://github.com/Revocalize)
 
 We're always happy to help and hear your feedback!
