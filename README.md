@@ -26,7 +26,7 @@ Explore the power of Revocalize AI and join our growing community of developers,
 [Live Demo](https://www.revocalize.ai) •
 [Installation](https://docs.revocalize.ai/authentication) •
 [Pricing](https://www.revocalize.ai/pricing) •
-[Contact Us](contact@revocalize.ai)
+[Contact Us](mailto:contact@revocalize.ai)
 
 </div>
 
