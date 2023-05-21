@@ -13,7 +13,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 <a href='http://makeapullrequest.com'><img alt='PRs Welcome' src='https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=shields'/></a>
-[![Version: 1.3](https://img.shields.io/badge/Version-1.3-blue)](https://www.revocalize.ai)
+[![Version: 1.0.3](https://img.shields.io/badge/Version-1.3-blue)](https://www.revocalize.ai)
 [![Uptime: 100%](https://img.shields.io/badge/Uptime-100%25-brightgreen)](https://www.revocalize.ai)
 
 [![Revocalize AI Voice Models](/images/revocalize-ai-voice-models.png)](https://www.revocalize.ai)
