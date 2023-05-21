@@ -1,9 +1,33 @@
+<!-- markdownlint-configure-file {
+  "MD013": {
+    "code_blocks": false,
+    "tables": false
+  },
+  "MD033": false,
+  "MD041": false
+} -->
+
+<div align="center">
 
 # Revocalize AI – API Documentation 🎙️
 
-![Revocalize AI Voice Models](/images/revocalize-ai-voice-models.png)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Version: 1.3](https://img.shields.io/badge/Version-1.3-blue)](https://www.revocalize.ai)
+[![Uptime: 100%](https://img.shields.io/badge/Uptime-100%25-brightgreen)](https://www.revocalize.ai)
 
-Welcome to the Revocalize AI Documentation! This innovative AI voice synthesizer platform utilizes state-of-the-art voice modeling and fingerprinting technology to generate natural-sounding voice models. With millions of hours of audio training data, you can now sing like any singer using AI and instantly record & convert your voice into any other voice. Explore the power of Revocalize AI and join our growing community of developers & enthusiasts.
+[![Revocalize AI Voice Models](/images/revocalize-ai-voice-models.png)](https://www.revocalize.ai)
+
+[Revocalize AI](https://www.revocalize.ai) is a cutting-edge voice platform providing state-of-the-art voice modeling and fingerprinting technology to generate natural-sounding singing voice models. With millions of hours of audio training data, you can now sing like any singer using AI and instantly record & convert your voice into any other voice. ⚡️ 
+
+Explore the power of Revocalize AI and join our growing community of developers, artists, music producers, audio engineers & enthusiasts.
+
+[Getting started](https://docs.revocalize.ai) •
+[Live Demo](https://www.revocalize.ai) •
+[Installation](https://docs.revocalize.ai/authentication) •
+[Pricing](https://www.revocalize.ai/pricing) •
+[Contact Us](contact@revocalize.ai)
+
+</div>
 
 ## 🚀 API Features
 
@@ -93,3 +117,20 @@ Response:
       "model_id": "123456",
       "current_epoch": 50001
     }
+
+## 📪 Contact
+
+If you have any questions, suggestions, or need assistance, feel free to reach out to us:
+
+- Email: [contact@revocalize.ai](mailto:contact@revocalize.ai)
+- Twitter: [@RevocalizeAI](https://twitter.com/Revocalize)
+- GitHub: [Revocalize AI](https://github.com/Revocalize)
+
+We're always happy to help and hear your feedback!
+
+
+## 📄 Copyright
+
+Copyright © 2023 Revocalize AI. All rights reserved.
+
+Unauthorized copying, distribution, or use of this documentation or any part of it is strictly prohibited without the express permission of Revocalize AI. Please contact [contact@revocalize.ai](mailto:contact@revocalize.ai) for any inquiries or permissions.
