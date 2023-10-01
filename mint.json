@@ -2,8 +2,8 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "Revocalize AI API Documentation",
   "logo": {
-    "dark": "/logo/dark.png",
-    "light": "/logo/light.png",
+    "dark": "/logo/revocalize-logo.svg",
+    "light": "/logo/revocalize-logo-white.svg",
     "href": "https://www.revocalize.ai"
   },
   "favicon": "/favicon.png",
@@ -27,12 +27,22 @@
     {
       "name": "Partners Program",
       "icon": "handshake",
-      "url": "mailto:partners@revocalize.ai"
+      "url": "https://www.revocalize.ai/affiliate"
     },
     {
       "name": "Try Live Demo",
       "icon": "bullseye-pointer",
-      "url": "https://www.revocalize.ai"
+      "url": "https://www.revocalize.ai/ai-voice-generator"
+    },
+    {
+      "name": "Download Audio Plugin",
+      "icon": "arrow-down-to-bracket",
+      "url": "https://www.revocalize.ai/download-audio-plugin"
+    },
+    {
+      "name": "Python SDK",
+      "icon": "python",
+      "url": "https://github.com/Revocalize/revocalize-python"
     },
     {
       "name": "Contact Us",
@@ -42,7 +52,7 @@
   ],
   "navigation": [
     {
-      "group": "Welcome",
+      "group": "Revocalize AI",
       "pages": ["introduction"]
     },
     {
@@ -50,7 +60,7 @@
       "pages": ["authentication"]
     },
     {
-      "group": "Voice Synthesis API",
+      "group": "Voice Conversion API",
       "pages": [
         "api-reference/synthesis/create",
         "api-reference/synthesis/get"
